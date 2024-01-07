@@ -138,6 +138,7 @@ class CAR(StrEnum):
   GENESIS_G70 = "GENESIS G70 2018"
   GENESIS_G70_2020 = "GENESIS G70 2020"
   GENESIS_GV70_1ST_GEN = "GENESIS GV70 1ST GEN"
+  GENESIS_G80_20 = "GENESIS G80 2020-23"
   GENESIS_G80 = "GENESIS G80 2017"
   GENESIS_G90 = "GENESIS G90 2017"
   GENESIS_GV80 = "GENESIS GV80 2023"
@@ -294,6 +295,7 @@ CAR_INFO: Dict[str, Optional[Union[HyundaiCarInfo, List[HyundaiCarInfo]]]] = {
     HyundaiCarInfo("Genesis GV70 (2.5T Trim) 2022-23", "All", car_parts=CarParts.common([CarHarness.hyundai_l])),
     HyundaiCarInfo("Genesis GV70 (3.5T Trim) 2022-23", "All", car_parts=CarParts.common([CarHarness.hyundai_m])),
   ],
+  CAR.GENESIS_G80_20: HyundaiCarInfo("Genesis G80 2020-23", "All", car_parts=CarParts.common([CarHarness.hyundai_a])),
   CAR.GENESIS_G80: HyundaiCarInfo("Genesis G80 2018-19", "All", car_parts=CarParts.common([CarHarness.hyundai_h])),
   CAR.GENESIS_G90: HyundaiCarInfo("Genesis G90 2017-18", "All", car_parts=CarParts.common([CarHarness.hyundai_c])),
   CAR.GENESIS_GV80: HyundaiCarInfo("Genesis GV80 2023", "All", car_parts=CarParts.common([CarHarness.hyundai_m])),
@@ -2163,7 +2165,7 @@ CAN_GEARS = {
 }
 
 CANFD_CAR = {CAR.KIA_EV6, CAR.IONIQ_5, CAR.IONIQ_6, CAR.TUCSON_4TH_GEN, CAR.TUCSON_HYBRID_4TH_GEN, CAR.KIA_SPORTAGE_HYBRID_5TH_GEN,
-             CAR.SANTA_CRUZ_1ST_GEN, CAR.KIA_SPORTAGE_5TH_GEN, CAR.GENESIS_GV70_1ST_GEN, CAR.KIA_SORENTO_PHEV_4TH_GEN,
+             CAR.SANTA_CRUZ_1ST_GEN, CAR.KIA_SPORTAGE_5TH_GEN, CAR.GENESIS_GV70_1ST_GEN, CAR.GENESIS_G80_20, CAR.KIA_SORENTO_PHEV_4TH_GEN,
              CAR.GENESIS_GV60_EV_1ST_GEN, CAR.KIA_SORENTO_4TH_GEN, CAR.KIA_NIRO_HEV_2ND_GEN, CAR.KIA_NIRO_EV_2ND_GEN,
              CAR.GENESIS_GV80, CAR.KIA_CARNIVAL_4TH_GEN, CAR.KIA_SORENTO_HEV_4TH_GEN, CAR.KONA_EV_2ND_GEN, CAR.KIA_K8_GEN, CAR.KIA_K8_HEV_1ST_GEN}
 
@@ -2257,6 +2259,7 @@ DBC = {
   CAR.KIA_SPORTAGE_HYBRID_5TH_GEN: dbc_dict('hyundai_canfd', None),
   CAR.GENESIS_GV70_1ST_GEN: dbc_dict('hyundai_canfd', None),
   CAR.KIA_SORENTO_PHEV_4TH_GEN: dbc_dict('hyundai_canfd', None),
+  CAR.GENESIS_G80_20: dbc_dict('hyundai_canfd', None),
   CAR.GENESIS_GV60_EV_1ST_GEN: dbc_dict('hyundai_canfd', None),
   CAR.KIA_SORENTO_4TH_GEN: dbc_dict('hyundai_canfd', None),
   CAR.KIA_NIRO_HEV_2ND_GEN: dbc_dict('hyundai_canfd', None),
@@ -2265,7 +2268,7 @@ DBC = {
   CAR.KIA_CARNIVAL_4TH_GEN: dbc_dict('hyundai_canfd', None),
   CAR.KIA_SORENTO_HEV_4TH_GEN: dbc_dict('hyundai_canfd', None),
   CAR.KONA_EV_2ND_GEN: dbc_dict('hyundai_canfd', None),
-   CAR.KIA_K8_GEN: dbc_dict('hyundai_canfd', None),
+  CAR.KIA_K8_GEN: dbc_dict('hyundai_canfd', None),
   CAR.KIA_K8_HEV_1ST_GEN: dbc_dict('hyundai_canfd', None),
   CAR.CUSTIN_1ST_GEN: dbc_dict('hyundai_kia_generic', None),
 }
