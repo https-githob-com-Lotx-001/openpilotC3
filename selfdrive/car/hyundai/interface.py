@@ -247,6 +247,10 @@ class CarInterface(CarInterfaceBase):
       ret.mass = 1950.
       ret.wheelbase = 2.87
       ret.steerRatio = 14.6
+    elif candidate == CAR.GENESIS_G80_20:
+      ret.mass = 3060.
+      ret.wheelbase = 3.01
+      ret.steerRatio = 16.5
     elif candidate == CAR.GENESIS_G80:
       ret.mass = 2060.
       ret.wheelbase = 3.01
